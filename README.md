@@ -2,6 +2,7 @@
 
 ## Contained Skills
 
+- [`agy`](skills/agy/SKILL.md): delegate research, read-only code review, or collaborative sparring to Agy CLI when you explicitly request it.
 - `brainstorming`: use before substantial creative or feature work that requires design. Explores the existing project, delegates unresolved user-owned decisions to Grill Me, evaluates implementation approaches, and produces an approved technical design before planning. Inspired by [obra/superpowers/brainstorming](https://github.com/obra/superpowers/tree/main/skills/brainstorming)
   - **Requires** the `grill-me` skill (not bundled in this repo) to resolve user-owned product/behavior decisions — brainstorming can't complete its workflow for substantial changes without it.
   - **Recommends** (not required) the `writing-for-agents` skill as a reference when drafting the design doc, so it's written to be consumed reliably by `writing-plans` afterward.
