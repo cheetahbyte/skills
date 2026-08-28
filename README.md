@@ -11,3 +11,4 @@
 - `pare`: use to inspect and simplify code before making changes. This skill is largely inspired by Noah Dunnagan's [cafe/distill](https://github.com/noahdunnagan/cafe/tree/main/plugins/distill) plugin.
 - [`engineering-defaults`](skills/engineering-defaults/SKILL.md): apply the canonical technology stack when starting a project or choosing frameworks, UI, data, authentication, hosting, testing, or other dependencies.
 - [`google-developer-docs-style`](skills/google-developer-docs-style/SKILL.md): apply Google's clear, accessible, globally understandable style to technical documentation, README files, tutorials, API docs, UI instructions, and Markdown or HTML content.
+- [`product-copy-editor`](skills/product-copy-editor/SKILL.md): rewrite changelog entries, release notes, feature descriptions, and product copy into concise, polished, user-facing language.
