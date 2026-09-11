@@ -13,6 +13,8 @@ Turn feature ideas into implementable technical designs without duplicating requ
 
 Do not duplicate Grill Me's work, and never re-ask a question it already resolved.
 
+**If Grill Me is not installed:** say so once, then resolve user-owned decisions yourself in its place. Ask one question at a time, lead with the decision that changes the design most, offer a recommended answer with each question, and record the outcomes in the design doc as if Grill Me had returned them.
+
 ## Core Principle
 
 Separate three kinds of uncertainty:

@@ -13,7 +13,7 @@ Assume a skilled developer who knows almost nothing about this toolset or proble
 
 **Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
 
-**Save plans to:** `brainstorming/plans/YYYY-MM-DD-<feature-name>.md` (or the project's convention) — alongside the design doc it implements.
+**Save plans to:** `brainstorming/plans/YYYY-MM-DD-<feature-name>.md` (or the project's convention) — alongside the design doc it implements. Get the date from `date +%F`; never guess it.
 
 ## Scope Check
 
