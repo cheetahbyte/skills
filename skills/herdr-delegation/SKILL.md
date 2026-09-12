@@ -16,7 +16,7 @@ You are the lead. Workers run in Herdr panes; the user sees only your replies
 and can peek at a pane by name if curious. Report outcomes, not the mechanics
 of delegation, unless asked.
 
-Mechanics (split, start, prompt, wait, read, IDs) live in `herdr --skill`.
+Mechanics (tabs, start, prompt, wait, read, IDs) live in `herdr --skill`.
 Run it once per session before the first delegation and follow it for every
 command. This skill decides *whether*, *to whom*, and *with what brief*.
 
@@ -71,10 +71,22 @@ No other model for Pi workers.
 Name workers `<role>-<module>`: `impl-auth`, `review-auth`, `plan-review`.
 Names are unique per session and must match `[a-z][a-z0-9_-]{0,31}`.
 
+## Placement
+
+Never split the user's pane. Every worker gets its own tab in the current
+workspace, unfocused, so the user's screen stays whole and workers line up
+in the tab bar:
+
+```bash
+herdr tab create --workspace "$HERDR_WORKSPACE_ID" --cwd "$PWD" --label <name> --no-focus
+```
+
+Start the worker in `.result.root_pane.pane_id`. This overrides the
+sibling-pane default in `herdr --skill`.
+
 ## Isolation
 
-One implementer at a time in the repo: sibling pane, same cwd, per
-`herdr --skill` defaults.
+One implementer at a time in the repo: its tab uses the repo cwd.
 
 Two or more implementers, or an implementer while you keep editing: each
 implementer gets its own worktree:
@@ -83,9 +95,10 @@ implementer gets its own worktree:
 herdr worktree create --branch <role-module> --base HEAD --no-focus
 ```
 
-Start the worker in the pane the response returns. Reviewers work in the
-implementer's worktree or on the branch, never in a fresh one. Agy plan
-reviews need no worktree; they read, they do not write.
+The response opens a worktree workspace with a root pane; start the worker
+there. Reviewers work in the implementer's worktree or on the branch, never
+in a fresh one. Agy plan reviews need no worktree; they read, they do not
+write.
 
 ## The brief
 
