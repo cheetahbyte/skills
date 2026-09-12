@@ -129,8 +129,18 @@ arguments". The `agy` skill has the full shape.
 ## Run and collect
 
 ```bash
-herdr agent prompt <name> "<brief>" --wait --timeout 900000
+herdr agent prompt <name> "<brief>"
 ```
+
+Never pass `--wait`: it blocks this session for the worker's whole run. Send
+the prompt, then wait in the background so you stay free for the user:
+
+```bash
+# Bash tool with run_in_background: true
+herdr agent wait <name> --timeout 900000
+```
+
+Or keep working and poll `herdr agent get <name>` before collecting.
 
 On `blocked`: `herdr agent read <name> --source recent-unwrapped --lines 60`,
 show the user what the worker is asking, act on their answer. Never answer an
