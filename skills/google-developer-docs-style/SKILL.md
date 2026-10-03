@@ -25,12 +25,15 @@ Project-specific rules win. Use these when the project is silent. Break a rule o
 
 - Address the reader as **you**; **we** only for a named organization.
 - Active voice, present tense, direct instructions. Conditions before instructions.
+- Short sentences: at most 20 words for an instruction, 25 for a description. One instruction per sentence.
+- One term per concept. Repeat the term; no synonyms for variety.
+- No noun stacks longer than three words; unpack them with a preposition or a verb.
 - US English, serial commas, contractions when natural.
 - No idioms, humor, culture-specific references, or unexplained jargon. Define an acronym on first use.
 - Inclusive example names and safe example data. Never expose personal or secret data.
 
 ## Final pass
 
-One clear purpose per page, one unique `h1`, consistent terms, parallel lists, correct heading hierarchy, runnable examples, no stale or duplicated guidance.
+One clear purpose per page, one unique `h1`, parallel lists, correct heading hierarchy, runnable examples, no stale or duplicated guidance.
 
-Source: https://developers.google.com/style
+Source: https://developers.google.com/style. The sentence-length, one-term, and noun-stack rules are borrowed from ASD-STE100 Simplified Technical English.
