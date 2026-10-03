@@ -2,7 +2,7 @@
 name: terse
 description: Direct, concise user-facing replies. Answer first and remove filler, flattery, repetition, and unnecessary formatting without losing needed detail.
 user-invocable: false
-disable-model-invocation: false
+disable-model-invocation: true
 ---
 
 # Terse
