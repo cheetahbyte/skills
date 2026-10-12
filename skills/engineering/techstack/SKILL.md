@@ -1,5 +1,5 @@
 ---
-name: engineering-defaults
+name: techstack
 description: >-
   Canonical, opinionated technology stack for any new project — what to use, in what order, and what to avoid. Always apply when starting a new project or making stack decisions: scaffolding an app, prototype, dashboard, landing page, or design system; or choosing a framework, UI library, database, ORM, auth, hosting, animation library, or any other dependency. Triggers: "new project", "start building", "scaffold", "spin up a site/app", "what should I use for", "which framework/library/database", "set up auth", "add a backend", "where do I deploy", "build a prototype". Always active when selecting or installing technology.
 disable-model-invocation: false
