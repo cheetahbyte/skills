@@ -1,6 +1,8 @@
 ---
 name: pr-writeup
 description: "Use when writing or updating a PR body."
+metadata:
+  category: collaboration
 ---
 ## Before Writing
 
