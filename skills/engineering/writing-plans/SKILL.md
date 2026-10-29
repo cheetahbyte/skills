@@ -1,6 +1,6 @@
 ---
 name: writing-plans
-description: Write an implementation plan that a fresh agent or a later session can execute without the current context. Use when the user asks for a plan, a handoff, or tasks for subagents, and a spec or agreed design already exists. Not for work you will implement yourself in this session.
+description: Write an implementation plan that a fresh agent or a later session can execute without the current context, or execute a task from one. Use when the user explicitly asks for a plan, a handoff, or tasks for subagents and a spec or agreed design already exists, or points you at a plan file to implement. Not when the user says to skip planning.
 metadata:
   category: engineering
 ---
@@ -8,6 +8,8 @@ metadata:
 # Writing Plans
 
 The reader is a capable engineer with zero context: no chat history, no spec in their head, questionable taste. They write idiomatic code once they know the interface and the test. What they cannot know is what was decided. A plan is the set of decisions the implementer cannot make alone, and nothing more.
+
+When you are handed a plan to implement, skip to [Executing a plan](#executing-a-plan).
 
 ## 1. Draft first
 
@@ -90,3 +92,12 @@ A task is the smallest unit with its own test cycle that a reviewer could reject
 A step is one action with a checkable result. A reference to another task points at its Interfaces block; never "similar to Task N".
 
 Lines that decide nothing don't belong in a plan: "TBD", "handle edge cases", "add appropriate validation", "write tests for the above", or a name no task defines and the codebase doesn't contain.
+
+## Executing a plan
+
+1. Read the whole plan, then the Decisions, Constraints, and Out of scope sections again before touching code. They bind every task.
+2. Implement only the task you were given (or the next unchecked one). Follow its steps in order and tick each `- [ ]` as its result is checked.
+3. When the plan is wrong (a path, signature, or command does not match the codebase), stop and report the mismatch instead of improvising a new decision.
+4. Run the task's verification command and the project's check command. Report what passed, what failed, and what was not run.
+
+Done when: every step of the task is ticked or reported as blocked, and nothing outside the task's Files list changed.
