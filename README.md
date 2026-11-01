@@ -5,6 +5,7 @@
 ### Collaboration
 
 - [`ship`](skills/collaboration/ship/SKILL.md): commit, push, and open or update a PR. Conventional Commits messages and titles, plus PR bodies with concise summaries, visual explanations, concrete evidence, and risk and rollback assessments. The PR body is inspired by Matt Pocock's [`engineering/pr`](https://github.com/mattpocock/skills/blob/main/skills/engineering/pr/SKILL.md) skill.
+- [`issue`](skills/collaboration/issue/SKILL.md): draft and file bug reports, feature requests, and proposals. Uses the repository's issue templates when they exist and falls back to its own, checks for duplicates first, and files only when asked.
 
 ### Engineering
 
