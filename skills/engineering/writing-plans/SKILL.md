@@ -40,6 +40,8 @@ Run this yourself, fix inline, and don't re-review:
 
 Link the plan and ask the user to review it. If tasks depend heavily on each other's interfaces, recommend one implementer for the whole plan; if they are independent, recommend one fresh agent per task with a review between tasks. Give the reason in one sentence.
 
+Name the review that follows implementation: `vet` in a fresh context (`@reviewer` in pi), against the spec this plan implements rather than the plan itself.
+
 ## Plan template
 
 ````markdown
