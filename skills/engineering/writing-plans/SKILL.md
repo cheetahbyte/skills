@@ -40,7 +40,7 @@ Run this yourself, fix inline, and don't re-review:
 
 Link the plan and ask the user to review it. If tasks depend heavily on each other's interfaces, recommend one implementer for the whole plan; if they are independent, recommend one fresh agent per task with a review between tasks. Give the reason in one sentence.
 
-Name the review that follows implementation: `vet` in a fresh context (`@reviewer` in pi), against the spec this plan implements rather than the plan itself.
+Name the review that follows implementation: `vet` in a fresh context (`@reviewer` in pi), against the spec this plan implements and the plan's Deviations section.
 
 ## Plan template
 
@@ -85,6 +85,13 @@ Every file created or modified, with its single responsibility. Follow the exist
 - [ ] Implement `<signature>` in `<path>`. One line on the approach when the signature and test leave a choice; a code block only for an algorithm they don't determine or exact copy the requirements fix.
 - [ ] Run `<command>`. Expected: passes.
 - [ ] Checkpoint: the files to stage and the commit message. Commit only if the user has approved commits.
+
+## Deviations
+
+Filled in during implementation. The tasks above stay as written. One entry per change:
+
+- Task N, step M · planned: … · did: … · why: …
+- **needs decision** · Task N · conflicts with: <the Decisions, Constraints, or Out of scope line, or the Interfaces block> · chose: … · alternative: … · why: …
 ````
 
 ## Tasks and steps
@@ -99,7 +106,7 @@ Lines that decide nothing don't belong in a plan: "TBD", "handle edge cases", "a
 
 1. Read the whole plan, then the Decisions, Constraints, and Out of scope sections again before touching code. They bind every task.
 2. Implement only the task you were given (or the next unchecked one). Follow its steps in order and tick each `- [ ]` as its result is checked.
-3. When the plan is wrong (a path, signature, or command does not match the codebase), stop and report the mismatch instead of improvising a new decision.
-4. Run the task's verification command and the project's check command. Report what passed, what failed, and what was not run.
+3. When the plan does not fit the codebase, adapt and keep going. Leave the task text as written: tick steps, and record every change in Deviations with what the plan said, what you did, and why. When a change would contradict Decisions, Constraints, Out of scope, or an Interfaces block another task consumes, still keep going: choose the option that is easiest to undo and mark the entry `needs decision`. Leave the spec unchanged.
+4. Run the task's verification command and the project's check command. Report what passed, what failed, and what was not run, and list every `needs decision` entry.
 
-Done when: every step of the task is ticked or reported as blocked, and nothing outside the task's Files list changed.
+Done when: every step of the task is ticked or reported as blocked, every change the plan did not describe has a Deviations entry, and nothing outside the task's Files list changed unless a Deviations entry names it.
